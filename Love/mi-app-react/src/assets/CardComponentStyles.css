@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+.message-container {
+  background: linear-gradient(135deg, #fce4ec, #e0f7fa);
+  color: #4a4a4a;
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 2rem auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+  position: absolute;
+  z-index: 1001;
+  max-width: 600px;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.message-container p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+}
+
+.next-button {
+  margin-top: 1.5rem;
+  background-color: #fce4ec;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: #4a4a4a;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.next-button:hover {
+  transform: scale(1.05);
+  background-color: #fde0ee;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .message-container {
+    padding: 2rem;
+    font-size: 1rem;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .message-container p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .message-container {
+    padding: 1.5rem;
+    border-radius: 15px;
+    width: calc(100% - 40px);
+    max-width: none;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .message-container p {
+    font-size: 1rem;
+  }
+}
